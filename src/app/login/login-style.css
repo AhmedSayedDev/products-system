@@ -1,0 +1,108 @@
+.login-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 2vw auto;
+    text-align: center;
+    flex-grow: 1;
+}
+form{
+    text-align: left;
+    font-size: 14px;
+}
+.login-container img {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.login-container h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #101828;
+}
+
+.login-container p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #667085;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 4px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+    
+.login-container input[type="email"]{
+    margin-bottom: 20px;
+}
+.login-container input[type="submit"] {
+    width: 100%;
+    background-color: #41CCCC;
+    color: #344054;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #28c3b7;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus,
+.login-container input[type="submit"]:focus {
+    outline: none;
+    border-color: #41CCCC;
+    box-shadow: 0 0 5px rgba(65, 204, 204, 0.5);
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 20px;
+    }
+
+    .login-container input[type="submit"] {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+
+    header,
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav a,
+    header img,
+    footer img {
+        margin-bottom: 10px;
+    }
+
+    header nav a {
+        margin-left: 0;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .footer-text {
+        font-size: 14px;
+    }
+}
