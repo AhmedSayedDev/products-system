@@ -1,6 +1,4 @@
-### README.md
 
-```markdown
 # Products System
 
 This is a simple Angular project that allows users to log in, explore products, search, filter by category, paginate, and add products to a cart. The application was developed using Angular 18.2.0.
@@ -12,8 +10,7 @@ This is a simple Angular project that allows users to log in, explore products, 
 - [Usage](#usage)
 - [APIs Used](#apis-used)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
