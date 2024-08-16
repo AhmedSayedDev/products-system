@@ -1,0 +1,56 @@
+<header>
+  <div class="logo-section">
+    <img src="../images/logo.png" alt="ClickTik Logo">
+    <span>ClickTik</span>
+  </div>
+  <nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/products">Products</a>
+    <a href="javascript:void(0);" (click)="showCart()">Cart ({{ cartService.getItemCount() }})</a>
+  </nav>
+</header>
+
+<main>
+  <aside class="filter-sidebar">
+    <h3>Products</h3>
+    <ul>
+      <li><input type="radio" name="category" [(ngModel)]="selectedCategory" value="" (change)="onFilterByCategory()"> All</li>
+      <li *ngFor="let category of categories">
+        <input type="radio" name="category" [(ngModel)]="selectedCategory" [value]="category" (change)="onFilterByCategory()"> {{ category }}
+      </li>
+    </ul>
+  </aside>
+
+  <section class="product-list">
+    <h1>Products</h1>
+    <div class="search-container">
+      <input type="text" [(ngModel)]="searchQuery" placeholder="Search products..." (input)="onSearch()">
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let product of filteredProducts | paginate: { itemsPerPage: pageSize, currentPage: page }">
+        <span class="discount-badge">-{{ product.discountPercentage }}%</span>
+        <img [src]="product.thumbnail" [alt]="product.title">
+        <h2>{{ product.title }}</h2>
+        <p>{{ product.description }}</p>
+        <p class="price">
+          <span class="original-price">${{ product.price }}</span>
+          <span class="discounted-price">${{ (product.price * (1 - product.discountPercentage / 100)).toFixed(2) }}</span>
+        </p>
+        <button type="button" (click)="addToCart(product)">ADD TO CART</button>
+      </div>
+    </div>
+
+    <div class="pagination-container">
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>
+    <img src="../images/logo.png" alt="ClickTik Logo"> ClickTik
+  </div>
+  <div class="footer-text">&copy; 2022 ClickTik</div>
+</footer>
+
