@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ccc;
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+header nav a:last-child {
+    margin-right: 0;
+}
+
+
+
+header .search-box {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+header .search-box input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+header .search-box button {
+    padding: 6px 12px;
+    background-color: #41CCCC;
+    border: 1px solid #41CCCC;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+header .search-box button:hover {
+    background-color: #28c3b7;
+}
+
+footer {
+    min-height: 90px;
+    background-color: #1D2939;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+footer .footer-text {
+    font-size: 14px;
+    color: #98A2B3;
+}
+
+
+@media (max-width: 480px) {
+    header,
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav a,
+    header img,
+    footer img {
+        margin-bottom: 10px;
+    }
+
+    header nav a {
+        margin-left: 0;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .footer-text {
+        font-size: 14px;
+    }
+}
