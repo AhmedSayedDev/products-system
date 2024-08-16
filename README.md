@@ -7,6 +7,7 @@ This is a simple Angular project that allows users to log in, explore products, 
 
 - [Features](#features)
 - [Installation](#installation)
+- [Testing Credentials](#testing-credentials)
 - [Usage](#usage)
 - [APIs Used](#apis-used)
 - [Project Structure](#project-structure)
@@ -45,6 +46,13 @@ To get started with this project, follow the steps below:
    ```
 
 5. Open your browser and navigate to `http://localhost:4200/`.
+
+## Testing Credentials
+
+Use the following credentials to test the application:
+
+- **Username:** `emilys`
+- **Password:** `emilyspass`
 
 ## Usage
 
